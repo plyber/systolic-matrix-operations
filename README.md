@@ -9,7 +9,7 @@ Reprezintă un singur procesor în matricea sistolică.
 #### Metode
 
 - `__init__(self)`
-  - Inițializează procesorul cu rezultatul acumulat zero și locuri pentru valorile matricilor A și B.
+  - Inițializează procesorul cu rezultatul acumulat zero și variabile pentru valorile matricilor A și B.
 
 - `load_a(self, a)`
   - Încarcă o valoare din matricea A în procesor.
@@ -18,7 +18,7 @@ Reprezintă un singur procesor în matricea sistolică.
   - Încarcă o valoare din matricea B în procesor.
 
 - `compute(self)`
-  - Calculează produsul valorilor încărcate A și B dacă ambele sunt non-zero, adăugând rezultatul la rezultatul acumulat.
+  - Calculează produsul valorilor încărcate A și B dacă ambele sunt non-zero se adaugă la rezultatul acumulat.
 
 - `pass_a_east(self)`
   - Transmite valoarea A la dreapta (est) și o resetează la zero.
@@ -33,7 +33,7 @@ Reprezintă un singur procesor în matricea sistolică.
 
 ### `systolic_matrix_multiplication(A, B)`
 
-Efectuează multiplicarea matricelor A și B folosind o matrice sistolică.
+Efectuează multiplicarea matricelor A și B
 
 #### Parametri
 
@@ -46,7 +46,7 @@ Efectuează multiplicarea matricelor A și B folosind o matrice sistolică.
 
 #### Descriere
 
-Această funcție inițializează o grilă de instanțe `Processor` dimensionată conform matricilor de intrare A și B. Efectuează o serie de pași temporali, unde la fiecare pas:
+Inițializează o grilă de instanțe `Processor` dimensionată conform matricilor de intrare A și B. Efectuează o serie de pași temporali, unde la fiecare pas:
 
 - Încarcă noi valori în procesoare din matricile A și B.
 - Propagă valorile A la dreapta (est) și valorile B în jos (sud) pe grilă.
