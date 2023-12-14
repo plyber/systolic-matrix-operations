@@ -63,16 +63,6 @@ Efectuează multiplicarea matricelor A și B
 
 - `C` : Matricea rezultantă după multiplicare.
 
-#### Descriere
-
-Inițializează o grilă de instanțe `Processor` dimensionată conform matricilor de intrare A și B. Efectuează o serie de pași temporali, unde la fiecare pas:
-
-- Încarcă noi valori în procesoare din matricile A și B.
-- Propagă valorile A la dreapta (est) și valorile B în jos (sud) pe grilă.
-- Calculează produsul valorilor curente A și B în fiecare procesor și acumulează rezultatul.
-
-După finalizarea tuturor pașilor, funcția colectează rezultatele din procesoare în matricea rezultantă C.
-
 ## Utilizare
 
 Pentru a efectua multiplicarea matricilor folosind această abordare sistolică, definiți matricile A și B ca tablouri NumPy și apelați funcția `systolic_matrix_multiplication` cu aceste tablouri.
