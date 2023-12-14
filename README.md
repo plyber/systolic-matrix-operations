@@ -56,7 +56,7 @@ După finalizarea tuturor pașilor, funcția colectează rezultatele din proceso
 
 ## Utilizare
 
-Pentru a efectua multiplicarea matricială folosind această abordare sistolică, definiți matricile A și B ca tablouri NumPy și apelați funcția `systolic_matrix_multiplication` cu aceste tablouri.
+Pentru a efectua multiplicarea matricilor folosind această abordare sistolică, definiți matricile A și B ca tablouri NumPy și apelați funcția `systolic_matrix_multiplication` cu aceste tablouri.
 
 ```python
 import numpy as np
@@ -65,6 +65,6 @@ import numpy as np
 A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 B = np.array([[9, 8, 7], [6, 5, 4], [3, 2, 1]])
 
-# Efectuează multiplicarea matricială sistolică
+# Efectuează multiplicarea matricilor in stil sistolic
 C = systolic_matrix_multiplication(A, B)
 print(C)
