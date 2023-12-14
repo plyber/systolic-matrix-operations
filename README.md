@@ -1,4 +1,4 @@
-# Documentație MatxMatMul
+# Documentație MatxMat
 
 ## Clase
 
