@@ -37,12 +37,12 @@ Efectuează multiplicarea matricelor A și B
 
 #### Parametri
 
-- `A` (`np.ndarray`): Matricea din stânga în operația de multiplicare.
-- `B` (`np.ndarray`): Matricea din dreapta în operația de multiplicare.
+- `A` : Matricea din stânga în operația de multiplicare.
+- `B` : Matricea din sus în operația de multiplicare.
 
 #### Returnează
 
-- `C` (`np.ndarray`): Matricea rezultantă după multiplicare.
+- `C` : Matricea rezultantă după multiplicare.
 
 #### Descriere
 
