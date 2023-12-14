@@ -52,7 +52,7 @@ def systolic_matrix_multiplication(A, B):
                 processors[0][j].load_b(B[step, j])
                 print(f'PROCESSOR {0, j} LOAD B: {B[step, j]}')
 
-        # Propagate A and B values and compute
+        # propagă A și B și calculează
         for i in range(a_rows):
             for j in range(b_cols):
                 processors[i][j].compute()
