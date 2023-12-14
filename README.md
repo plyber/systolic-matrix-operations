@@ -2,7 +2,7 @@
 
 ## Clase
 
-## Clasa `Processor`
+## `Processor`
 Reprezintă un procesor individual în aranjamentul de matrici `AxB[1]`. Fiecare procesor stochează valorile curente din matricile A și B, efectuează calcule și acumulează rezultatul.
 
 #### Metode
