@@ -2,9 +2,8 @@
 
 ## Clase
 
-### `Processor`
-
-Reprezintă un singur procesor în matricea sistolică.
+## `Processor`
+Reprezintă un procesor individual în aranjamentul de matrici `AxB[1]`. Fiecare procesor stochează valorile curente din matricile A și B, efectuează calcule și acumulează rezultatul.
 
 #### Metode
 
@@ -35,6 +34,26 @@ Reprezintă un singur procesor în matricea sistolică.
 
 Efectuează multiplicarea matricelor A și B
 
+1. **Inițializarea matricii rezultatului și a procesoarelor:**
+   - Matricea C este inițializată ca o matrice de zerouri cu dimensiunile rezultatului final al multiplicării.
+   - Se creează un grid de procesoare, cu fiecare procesor reprezentând un element în matricea C.
+
+2. **Parcurgerea pașilor de calcul:**
+   - Funcția iterează printr-o serie de pași, fiecare pas corespunzând unei faze a calculelor în aranjamentul sistolic.
+   - Numărul total de pași este `a_rows + a_cols - 1`, asigurându-se că toate valorile din matricile A și B sunt procesate.
+
+3. **Încărcarea valorilor în procesoare:**
+   - La fiecare pas, valorile corespunzătoare din matricile A și B sunt încărcate în procesoare.
+   - Pentru matricea A, valorile sunt încărcate în coloana 0 a procesoarelor, iar pentru matricea B, în rândul 0.
+   - Indicii `a_index` și `b_index` sunt calculați pentru a determina ce valori trebuie încărcate în fiecare procesor.
+
+4. **Calcul și propagare:**
+   - Fiecare procesor efectuează un calcul (înmulțirea valorilor A și B curente) și adaugă rezultatul la valoarea acumulată.
+   - După calcul, fiecare procesor pasează valorile A și B către procesorii vecini (dreapta și jos).
+
+5. **Colectarea rezultatelor:**
+   - După ce toți pașii sunt finalizați, rezultatele acumulate de fiecare procesor sunt colectate pentru a forma matricea C finală.
+
 #### Parametri
 
 - `A` : Matricea din stânga în operația de multiplicare.
@@ -43,16 +62,6 @@ Efectuează multiplicarea matricelor A și B
 #### Returnează
 
 - `C` : Matricea rezultantă după multiplicare.
-
-#### Descriere
-
-Inițializează o grilă de instanțe `Processor` dimensionată conform matricilor de intrare A și B. Efectuează o serie de pași temporali, unde la fiecare pas:
-
-- Încarcă noi valori în procesoare din matricile A și B.
-- Propagă valorile A la dreapta (est) și valorile B în jos (sud) pe grilă.
-- Calculează produsul valorilor curente A și B în fiecare procesor și acumulează rezultatul.
-
-După finalizarea tuturor pașilor, funcția colectează rezultatele din procesoare în matricea rezultantă C.
 
 ## Utilizare
 
